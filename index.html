@@ -6,78 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .back {
-          position: fixed;
-          padding: 0;
-          margin: 0;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: white;
-          animation-name: backdiv;
-          animation-duration: 1s;
-          animation-iteration-count: infinite;
-      
+        ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
         }
-      
-        .heart {
-          position: absolute;
-          margin: auto;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background-color: pink;
-          height: 50px;
-          width: 50px;
-          transform: rotate(-45deg);
-          animation-name: beat;
-          animation-duration: 1s;
-          animation-iteration-count: infinite;
-      
+        li{
+            list-style-type: none;
+            font-size: medium;
+            font-weight: 800;
         }
-        .heart:after {
-          background-color: pink;
-          content: "";
-          border-radius: 50%;
-          position: absolute;
-          width: 50px;
-          height: 50px;
-          top: 0px;
-          left: 25px;
+        header{
+            margin: -10px;
+            height: 20px;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            font-size: bold;
+            font-weight: 900;
         }
-        .heart:before {
-          background-color: pink;
-          content: "";
-          border-radius: 50%;
-          position: absolute;
-          width: 50px;
-          height: 50px;
-          top: -25px;
-          left: 0px;
+        nav{
+            margin: 0 -10px;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            background-color: Cornsilk;
+
         }
-      
-        @keyframes backdiv {
-          50% {
-            background: #ffe6f2;
-          }
+        a:link{
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
         }
-      
-        @keyframes beat {
-          0% {
-            transform: scale(1) rotate(-45deg);
-          }
-          50% {
-            transform: scale(0.6) rotate(-45deg);
-          }
+        /**a:visited{
+            border-radius: 5px;
+            color: white;
+        }**/
+        div{
+            margin: 30px;
         }
-      
-      </style>
+        span{
+            text-transform: uppercase;
+            font-size: bold;
+            font-weight: 700;
+        }
+        p{
+            padding: 10px;
+            margin: 10px;
+        }
+        #mon{
+            background-color: AliceBlue;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+        #tue{
+            background-color: Cornsilk;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+        #wed{
+            background-color: AliceBlue;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+        #thur{
+            background-color: AntiqueWhite;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+        #fri{
+            background-color: Cornsilk;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+    </style>
 </head>
 <body>
-
-      <div class="back"></div>
-      <div class="heart"></div>
+    <header>
+        TimeTable
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#mon">Mon</a></li>
+            <li><a href="#tue">Tue</a></li>
+            <li><a href="#wed">Wed</a></li>
+            <li><a href="#thur">Thur</a></li>
+            <li><a href="#fri">Fri</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="mon">
+            <span>mon</span><hr>
+            <p>8:30-10:30 <br>PSE312 <br>CLASS:PG hall</p><hr>
+            <p>10:30-12:30 <br>COE318 <br>CLASS:PG hall</p>
+        </div>
+        <div id="tue">
+            <span>tue</span><hr>
+            <p>8:30-10:30 <br> ECE302 <br>CLASS:PG hall</p>
+        </div>
+        <div id="wed">
+            <span>wed</span><hr>
+            <p>8:30-10:30 <br> EEE306 <br>CLASS:PG hall</p><hr>
+            <p>10:30-11:30 <br> EEE302 <br>CLASS:PG hall</p>
+        </div>
+        <div id="thur">
+            <span>thur</span><hr>
+            <p>8:30-10:30 <br> ENG308/ECE316 <br>CLASS:PMF hall</p><hr>
+            <p>1:30-2:30 <br> EEE302 T <br>CLASS:PG hall</p><hr>
+            <p>2:30-3:30 <br> COE318 <br>CLASS:PG hall</p>
+        </div>
+        <div id="fri">
+            <span>fri</span><hr>
+            <p> 12:30-1:30 <br> ENG308 <br>CLASS:PMF hall</p>
+        </div>
+    </main>
 </body>
 </html>
